@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <style>
+        .red{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <span class="red"><%=errMsg.existUserErr%></span>
+    <span class="red"><%=errMsg.networkErr%></span>
+    <form action="http://localhost:3000/register" method="post">
+       邮  &nbsp;&nbsp; 箱：&nbsp;&nbsp;&nbsp;<input type="text" name="email"><span class="red"><%=errMsg.emailErr%></span><br>
+       昵  &nbsp;&nbsp; 称：&nbsp;&nbsp;&nbsp;<input type="text" name="nickName"><span class="red"><%=errMsg.nickErr%></span><br>
+       密  &nbsp;&nbsp; 码：&nbsp;&nbsp;&nbsp;<input type="text" name="password"><span class="red"><%=errMsg.pwdErr%></span><br>
+       确认密码：<input type="text" name="repassword"><span class="red"><%=errMsg.repwdErr%></span><br>
+       <button type="submit">注册</button>
+    </form>
+</body>
+</html>

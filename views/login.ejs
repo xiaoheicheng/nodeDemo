@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <style>
+        .red{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <span class="red"><%=errMsg.err%></span>
+    <span class="red"><%=errMsg.networkErr%></span>
+    <form action="http://localhost:3000/login" method="post">
+        邮  &nbsp;&nbsp; 箱：&nbsp;&nbsp;&nbsp;<input type="text" name="email" value="<%=errMsg.email%>">
+        <span class="red"><%=errMsg.emailErr%></span>
+        <br>
+        密  &nbsp;&nbsp; 码：&nbsp;&nbsp;&nbsp;<input type="text" name="password">
+        <span class="red"><%=errMsg.pwdErr%></span>
+        <br>  
+        <button type="submit">登录</button>
+     </form>
+</body>
+</html>
